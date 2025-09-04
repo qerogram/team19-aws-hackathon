@@ -13,7 +13,7 @@ Amazon Q Developer Hackathon으로 구현하고자 하는 아이디어를 설명
 ## 동영상 데모
 
 Amazon Q Developer로 구현한 어플리케이션의 데모 영상을 입력합니다.
-**Git의 Readme에는 GIF 형식으로 업로드하며, 원본 동영상은 별도로 안내된 링크로 제출합니다.**
+**Git의 Readme에는 GIF 형식으로 업로드하며, 원본 동영상은 발표 Presentation에 제출합니다.**
 
 ## 리소스 배포하기
 
