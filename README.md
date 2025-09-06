@@ -67,18 +67,19 @@ Superset 접속 → 챗봇과 대화 → "매출 현황 보여줘" → 즉시 �
 2. Terraform v1.2.1 사용
 3. "02. IaC"를 terraform init 후 apply
 4. "01. superset/aws_hackathon_deploy/ci_all.sh"을 통해서 빌드 
-5. EC2에 접근해서, 도커 컴포즈 reload
+5. "03. code"에서 .env 작성 후 sciprts/ci.sh 실행하여 빌드
+6. EC2에 접근해서, 도커 컴포즈 reload
 
 ```sh
 cd /opt/superset && \
     sudo docker-compose pull && \
     sudo docker-compose up -d docker-compose.yml
 ```
-6. EC2보다 RDS가 늦게 뜰 수도 있서서, 데이터를 뒤에 넣어주기.
+7. EC2보다 RDS가 늦게 뜰 수도 있어서, 데이터를 뒤에 넣어주기.
 ```sh
 python3 /tmp/init_rds_data.py
 ```
-7. superset 페이지인 (4edu.co.kr) 에 접근해서 로그인 후, DB Connection으로 RDS와 연결
+8. superset 페이지인 (4edu.co.kr) 에 접근해서 로그인 후, DB Connection으로 RDS와 연결
 
 ### 리소스 삭제
 ```bash
