@@ -619,10 +619,10 @@ resource "aws_iam_instance_profile" "superset_profile" {
   role = aws_iam_role.superset_role.name
 }
 
-# RDS Subnet Group (Public for hackathon)
+# RDS Subnet Group
 resource "aws_db_subnet_group" "main" {
   name       = "superset-hackathon-db-subnet-group"
-  subnet_ids = [aws_subnet.public_a.id, aws_subnet.public_b.id]
+  subnet_ids = [aws_subnet.private_a.id, aws_subnet.private_b.id]
 
   tags = {
     Name = "superset-hackathon-db-subnet-group"
@@ -647,7 +647,7 @@ resource "aws_db_instance" "postgres" {
   
   vpc_security_group_ids = [aws_security_group.rds.id]
   db_subnet_group_name   = aws_db_subnet_group.main.name
-  publicly_accessible    = true  # Hackathon용 public 접근
+  # publicly_accessible    = true  # Hackathon용 public 접근
   
   backup_retention_period = 7
   backup_window          = "03:00-04:00"
