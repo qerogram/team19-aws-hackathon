@@ -55,6 +55,7 @@ Superset 접속 → 챗봇과 대화 → "매출 현황 보여줘" → 즉시 �
 ```
 
 ## 동영상 데모
+![AWS Architecture](./04.%20demo/demo.gif)
 
 
 ## 리소스 배포하기
